@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="405.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ProjetoPOOController">
+    <children>
+        <TextField fx:id="txtNovoEmail" layoutX="14.0" layoutY="119.0" prefHeight="27.0" prefWidth="201.0" promptText="Adicione um E-mail" />
+        <Button fx:id="btnCadastrarEmail" layoutX="225.0" layoutY="119.0" mnemonicParsing="false" onAction="#cadastrarEmail" prefHeight="27.0" prefWidth="79.0" style="-fx-background-color: green;" text="Adicionar" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font></Button>
+        <ListView fx:id="lvEmailsNaoLidos" layoutX="19.0" layoutY="169.0" prefHeight="150.0" prefWidth="284.0" />
+        <Label layoutX="19.0" layoutY="152.0" text="E-mails Não Lidos" />
+        <ListView fx:id="lvEmailsLidos" layoutX="314.0" layoutY="169.0" prefHeight="150.0" prefWidth="272.0" />
+        <Label layoutX="317.0" layoutY="152.0" text="E-mails Lidos" />
+        <Button fx:id="btnMoverParaLidos" layoutX="19.0" layoutY="327.0" mnemonicParsing="false" onAction="#moverParaLidos" style="-fx-background-color: green;" text="Marcar como Lido" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font></Button>
+        <Button fx:id="btnMoverParaNaoLidos" layoutX="150.0" layoutY="327.0" mnemonicParsing="false" onAction="#moverParaNaoLidos" prefHeight="27.0" prefWidth="153.0" style="-fx-background-color: green;" text="Marcar como Não Lido" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font></Button>
+        <Button fx:id="btnExcluirEmail" layoutX="527.0" layoutY="327.0" mnemonicParsing="false" onAction="#excluirEmail" style="-fx-background-color: green;" text="Excluir" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font></Button>
+        <Button fx:id="btnDesfazer" layoutX="382.0" layoutY="327.0" mnemonicParsing="false" onAction="#desfazer" style="-fx-background-color: green;" text="Desfazer ultima ação" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font></Button>
+        <Label fx:id="lblStatus" layoutX="100.0" layoutY="372.0" prefHeight="18.0" prefWidth="400.0" />
+      <Label alignment="CENTER" prefHeight="108.0" prefWidth="600.0" style="-fx-background-color: green;" text="Gerenciador de E-mails" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>
